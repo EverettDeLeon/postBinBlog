@@ -1,0 +1,19 @@
+<%- include('partials/header'); -%>
+
+<h1>Genesis Block</h1>
+<p> <%= homePage %> </p>
+
+<% posts.forEach(function(post) { %>
+<%    //console.log(post.title); %> 
+<h1> <%= post.title %> </h1>
+<% postContent = post.content; %>
+<% postContent = postContent.substring(0, 100) + "..." ; %>
+<p> <%= postContent %>  
+<a href="/posts/<%= post.title %>">Read More</a>
+</p>    
+
+<% }); %>
+
+
+<%- include('partials/footer'); -%>
+
