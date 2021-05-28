@@ -1,19 +1,20 @@
-<%- include('partials/header'); -%>
 
-<h1>Genesis Block</h1>
-<p> <%= homePage %> </p>
+<%- include("partials/header"); -%>
 
-<% posts.forEach(function(post) { %>
-<%    //console.log(post.title); %> 
-<h1> <%= post.title %> </h1>
-<% postContent = post.content; %>
-<% postContent = postContent.substring(0, 100) + "..." ; %>
-<p> <%= postContent %>  
-<a href="/posts/<%= post.title %>">Read More</a>
-</p>    
-
-<% }); %>
+<h1>Home</h1>
+<p> <%= startingContent %> </p>
 
 
-<%- include('partials/footer'); -%>
+<%  posts.forEach(function(post){ %>
 
+<h1><%=post.title%></h1>
+<p>
+<%=post.content.substring(0, 100) + " ..."%>
+<a href="/posts/<%=post._id%>">Read More</a>
+</p>
+
+
+<% }) %>
+
+
+<%- include("partials/footer"); -%>
