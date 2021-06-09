@@ -1,4 +1,37 @@
 <%- include("partials/header"); -%>
-    <h1>Contact</h1>
-    <p> <%= contactContent %> </p>
+
+
+<div class="container contact-container">
+    <div class="row">
+    <div class="col-lg-6 col-md-12  contact-header">
+        <h1>Do you have a question or want to get ahold of us?</h1>
+        <hr>
+        <h1>Contact Us</h1>
+    </div>
+    <div class="col-lg-6 col-md-12 form">
+        <!-- form for contact information -->
+        <form action="">
+            <div class="form-group">
+                <input class="form-control-lg" type="text" name="userFirstName" id="" placeholder="First Name*">
+             </div>
+             <div class="form-group">
+                <input class="form-control-lg" type="text" name="userLastName" id="" placeholder="Last Name*">
+            </div>
+            <div class="form-group">
+                <input class="form-control-lg" type="text" name="userPhoneNumber" id="" placeholder="Phone Number">
+            </div>
+            <div class="form-group">
+                <input class="form-control-lg" type="email" name="userEmail" id="" placeholder="Email*">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control-lg" name="" id="" cols="23" rows="5" placeholder="Message"></textarea>
+            </div>
+            <div class="form-group">
+                <button  class="form-control-lg btn btn-outline-success" type="submit" name="button">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
 <%- include("partials/footer"); -%>
